@@ -21,6 +21,7 @@
                 top: -3px;
                 font-weight: bold;
             }
+<<<<<<< HEAD
         </style>
 
         <?php
@@ -36,6 +37,22 @@
             
 
         ?>
+=======
+            </style>
+
+            <?php
+
+                $fp = fopen($filename, 'a+');
+
+                fwrite($fp, $dataNome);
+                fwrite($fp, " ");
+                fwrite($fp, $dataNote);
+                fwrite($fp, "<br>");
+
+                fclose($fp);
+
+            ?>
+>>>>>>> M2
     </head>
     <body>
         <div class="container">
