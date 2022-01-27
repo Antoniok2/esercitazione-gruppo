@@ -28,7 +28,13 @@
             <div class="row">
                 <div class="col-6 offset-3">
                     <p class="notes">
-                        <!-- stampare qui le note salvate -->
+                    <?php
+                        $fpR = fopen($filename, "r");
+                        $content = fread($fpR, filesize($filename));
+                        echo $content . "<br>";
+
+                        fclose($fpR);
+                    ?>
                     </p>
                     <fieldset>
                         <legend>Inserisci una nota</legend>
