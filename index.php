@@ -21,7 +21,21 @@
                 top: -3px;
                 font-weight: bold;
             }
-            </style>
+        </style>
+
+        <?php
+
+            $filename = "note.txt";
+
+
+            $dataNome = $_POST['nome'];  
+            $dataNote = $_POST['note'];  
+
+            
+
+            
+
+        ?>
     </head>
     <body>
         <div class="container">
@@ -29,20 +43,26 @@
                 <div class="col-6 offset-3">
                     <p class="notes">
                         <!-- stampare qui le note salvate -->
+                        <?php
+
+
+                           
+
+                        ?>
                     </p>
                     <fieldset>
                         <legend>Inserisci una nota</legend>
                     </fieldset>
-                    <form>
+                    <form method = "POST">
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label">Nome</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" autocomplete="off">
+                                <input type="text"  name = "nome"  class="form-control" autocomplete="off">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-12">
-                                <textarea class="form-control" rows="6"></textarea>
+                                <textarea name = "note" class="form-control" rows="6"></textarea>
                             </div>
                         </div>
                         <div class="row">
@@ -54,8 +74,5 @@
                 </div>
             </div>
         </div>
-
-
-        prova
     </body>
 </html>
