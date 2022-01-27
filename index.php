@@ -22,6 +22,19 @@
                 font-weight: bold;
             }
             </style>
+
+            <?php
+
+                $fp = fopen($filename, 'a+');
+
+                fwrite($fp, $dataNome);
+                fwrite($fp, " ");
+                fwrite($fp, $dataNote);
+                fwrite($fp, "<br>");
+
+                fclose($fp);
+
+            ?>
     </head>
     <body>
         <div class="container">
